@@ -5,8 +5,16 @@ return {
     require('lualine').setup {
       options = {
         theme = 'catppuccin', -- "gruvbox-material"
-        extensions = { 'neo-tree' },
         globalstatus = true,
+      },
+      sections = {
+        lualine_c = {
+          {
+            'filename',
+            path = 1,
+            shorting_target = 10,
+          },
+        },
       },
     }
   end,
