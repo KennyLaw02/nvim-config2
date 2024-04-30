@@ -48,4 +48,21 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Custom Keymaps
+vim.keymap.set({ 'i', 'v' }, '<A-c>', '<C-c>') -- Normal mode
+vim.keymap.set('n', '<A-j>', ':m .+1<CR>==') -- move line up(n)
+vim.keymap.set('n', '<A-k>', ':m .-2<CR>==') -- move line down(n)
+vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv") -- move line up(v)
+vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv") -- move line down(v)
+vim.keymap.set({ 'n', 'i', 'v' }, '<A-w>', '<C-c>:w<CR>') -- Save file in all modes
+vim.keymap.set({ 'n' }, '-', '$') -- Move to end of line via '-'
+vim.keymap.set({ 'n' }, '<A-f>', ':Neotree toggle reveal left<CR>') -- Toggle neo tree
+vim.keymap.set({ 'n' }, '<C-c>', 'gcc', { remap = true }) -- Comment out line in N mode
+vim.keymap.set({ 'v' }, '<C-c>', 'gc', { remap = true }) -- Comment selection in V mode
+vim.keymap.set({ 'i' }, '<C-Del>', '<C-o>dw') -- Equivalent to Ctrl-Del use C-w for Ctrl-Bs
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-d>', '<C-d>zz') -- Centres cursor when scrolling down
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-u>', '<C-u>zz') -- Centres cursor when scrolling up
+vim.keymap.set({ 'n', 'v' }, '<leader>h', ':noh<CR>') -- Clears highlighted text
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle) -- Toggle undo tree
+
 -- vim: ts=2 sts=2 sw=2 et
