@@ -5,7 +5,9 @@ return {
     require('lualine').setup {
       options = {
         theme = 'catppuccin', -- "gruvbox-material"
+        extensions = { 'neo-tree' },
         globalstatus = true,
+        -- disabled_filetypes = { 'neo-tree' },
       },
       sections = {
         lualine_c = {
