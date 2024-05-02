@@ -66,7 +66,7 @@ vim.keymap.set({ 'n', 'v' }, '<leader>h', ':noh<CR>') -- Clears highlighted text
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle) -- Toggle undo tree
 
 -- Cut without copying
-vim.keymap.set({ 'n', 'i', 'v' }, '<leader>d', '"_d')
-vim.keymap.set({ 'n', 'i', 'v' }, '<leader>p', '"_dP')
+vim.keymap.set({ 'n', 'v' }, '<leader>d', '"_d')
+vim.keymap.set({ 'n', 'v' }, '<leader>p', '"_dP')
 
 -- vim: ts=2 sts=2 sw=2 et
